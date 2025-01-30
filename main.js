@@ -1,12 +1,17 @@
 const facts = [
-    "Did you know that honey never spoils?",
-    "Bananas are berries, but strawberries aren't.",
-    "A group of flamingos is called a 'flamboyance'.",
-    "Octopuses have three hearts.",
-    "The Eiffel Tower can be 15 cm taller during the summer."
+    "I love hiking and have traveled to five national parks.",
+    "I'm learning to play the guitar in my free time.",
+    "I once met a celebrity at a coffee shop.",
+    "I can cook a three-course meal from scratch.",
+    "I have a collection of over 100 vinyl records.",
+    "I enjoy painting landscapes in my spare time.",
+    "I have traveled to 15 countries and counting.",
+    "I can speak three languages fluently.",
+    "I once ran a marathon for charity.",
+    "I have a pet parrot that can mimic my voice."
 ];
 
-document.getElementById('generate-fact').addEventListener('click', function() {
+document.getElementById('factButton').addEventListener('click', function() {
     const randomIndex = Math.floor(Math.random() * facts.length);
-    document.getElementById('fact-display').innerText = facts[randomIndex];
+    document.getElementById('factDisplay').innerText = facts[randomIndex];
 });

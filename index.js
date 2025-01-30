@@ -15,3 +15,15 @@ document.getElementById('factButton').addEventListener('click', function() {
     const randomIndex = Math.floor(Math.random() * facts.length);
     document.getElementById('factDisplay').innerText = facts[randomIndex];
 });
+
+// New function to add user-submitted facts
+document.getElementById('submitFactButton').addEventListener('click', function() {
+    const userFact = document.getElementById('userFactInput').value;
+    if (userFact) {
+        facts.push(userFact);
+        document.getElementById('userFactInput').value = ''; // Clear input
+        alert("Your fact has been added!");
+    } else {
+        alert("Please enter a fact before submitting.");
+    }
+});

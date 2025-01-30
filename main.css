@@ -1,20 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    background-color: #121212; /* Dark background */
+    color: white; /* Text color for better contrast */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(15px); /* Blur effect */
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 }
 
@@ -41,7 +43,6 @@ button:hover {
 p {
     margin-top: 20px;
     font-size: 18px;
-    color: #333;
     animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -52,4 +53,15 @@ p {
     to {
         opacity: 1;
     }
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+    0% { background-color: rgba(255, 255, 255, 0.1); }
+    50% { background-color: rgba(255, 255, 255, 0.2); }
+    100% { background-color: rgba(255, 255, 255, 0.1); }
+}
+
+.container {
+    animation: backgroundAnimation 5s infinite alternate; /* Background animation */
 }

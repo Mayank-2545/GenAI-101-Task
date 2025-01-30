@@ -1,17 +1,36 @@
-const facts = [
-    "I love hiking and have traveled to five national parks.",
-    "I'm learning to play the guitar in my free time.",
-    "I once met a celebrity at a coffee shop.",
-    "I can cook a three-course meal from scratch.",
-    "I have a collection of over 100 vinyl records.",
-    "I enjoy painting landscapes in my spare time.",
-    "I have traveled to 15 countries and counting.",
-    "I can speak three languages fluently.",
-    "I once ran a marathon for charity.",
-    "I have a pet parrot that can mimic my voice."
-];
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-document.getElementById('factButton').addEventListener('click', function() {
-    const randomIndex = Math.floor(Math.random() * facts.length);
-    document.getElementById('factDisplay').innerText = facts[randomIndex];
-});
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+}
